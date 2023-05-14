@@ -2,9 +2,27 @@
 from pages.accordian import Accordian
 import time
 def test_visible_accordian(browser):
-    obj_page = Accordian(browser)
-    obj_page.visit()
-    assert obj_page.accordian.visible()
-    obj_page.f_accordian.click()
+    obj_page = Accordian(browser) #созд объекта стран
+    obj_page.visit() #вызов метода входа на страницу
+    assert obj_page.accordian.visible() #проверка на видимость элемента
+    obj_page.f_accordian.click() #вызов метода клик для созданного элемента
     time.sleep(2)
-    assert not obj_page.f_accordian.visible()
+    assert not obj_page.accordian.visible() #проверка отсутствия видимости первого элемента
+
+def test_visible_accordian_default(browser):
+    t_default = Accordian(browser)
+    t_default.visit()
+    time.sleep(2)
+    assert not t_default.fdefault.visible()
+    assert not t_default.gdefault.visible()
+    assert not t_default.hdefault.visible()
+
+
+
+
+
+    # assert not t_default.fdefault.visible()
+    # assert t_default.gdefault.visible()
+    # t_default.gdefault.click()
+    # time.sleep(2)
+    # assert t_default.hdefault.visible()
