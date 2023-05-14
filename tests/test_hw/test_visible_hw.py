@@ -16,13 +16,3 @@ def test_visible_accordian_default(browser):
     assert not t_default.fdefault.visible()
     assert not t_default.gdefault.visible()
     assert not t_default.hdefault.visible()
-
-
-
-
-
-    # assert not t_default.fdefault.visible()
-    # assert t_default.gdefault.visible()
-    # t_default.gdefault.click()
-    # time.sleep(2)
-    # assert t_default.hdefault.visible()
