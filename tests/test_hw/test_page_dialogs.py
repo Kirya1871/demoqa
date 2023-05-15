@@ -1,6 +1,7 @@
 import time
 
 from pages.modal_dialogs import ModalDialogs
+from pages.demoqa import DemoQa
 
 def test_modal_elements(browser):
     m_ele = ModalDialogs(browser)
@@ -9,6 +10,8 @@ def test_modal_elements(browser):
 
 def test_navigation_modal(browser):
     navig_modal = ModalDialogs(browser)
+    demoqa = DemoQa(browser)
+
     navig_modal.visit()
     navig_modal.refresh()
     time.sleep(2)
@@ -20,5 +23,5 @@ def test_navigation_modal(browser):
     time.sleep(2)
     navig_modal.forward()
     time.sleep(2)
-    # assert navig_modal.equal_url()
-    assert browser.title == 'DEMOQA'
+    assert demoqa.equal_url()
+    assert demoqa.get_title() == demoqa.pageData['title']
