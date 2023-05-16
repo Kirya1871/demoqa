@@ -25,3 +25,5 @@ def test_navigation_modal(browser):
     time.sleep(2)
     assert demoqa.equal_url()
     assert demoqa.get_title() == demoqa.pageData['title']
+    browser.set_window_size(1000, 1000)
+
