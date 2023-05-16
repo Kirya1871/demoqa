@@ -4,6 +4,6 @@ from selenium import webdriver
 @pytest.fixture(scope= "session")
 def browser(): #название функции
     driver = webdriver.Chrome() #создание виртуальный браузер
-    driver.set_window_size(1000, 1000)
+    driver.set_window_size(1500, 900)
     yield driver
     driver.quit()

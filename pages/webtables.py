@@ -22,3 +22,4 @@ class WebTables(BasePage):
         self.btn_submit = WebElements(driver, '#submit')
         self.edit_rec = WebElements(driver, '#edit-record-4 > svg')
         self.button_delete =WebElements(driver, '#delete-record-4 > svg')
+
