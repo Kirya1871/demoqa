@@ -17,3 +17,5 @@ class FormPage(BasePage):
         self.hobbies_checkbox_1 = WebElements(driver,'#hobbies-checkbox-1')
         self.currentAddress = WebElements(driver, '#currentAddress')
         self.scroll_elem = WebElements(driver, '#Select State')
+
+

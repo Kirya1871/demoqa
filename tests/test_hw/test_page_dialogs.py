@@ -23,7 +23,7 @@ def test_navigation_modal(browser):
     time.sleep(2)
     navig_modal.forward()
     time.sleep(2)
-    assert demoqa.equal_url()
-    assert demoqa.get_title() == demoqa.pageData['title']
-    browser.set_window_size(1000, 1000)
+    assert demoqa.equal_url() #проверка урл на глав странице
+    assert demoqa.get_title() == demoqa.pageData['title'] #проверка title на главной странице
+    browser.set_window_size(1000, 1000) #возвращаем размеры экрана по умолчанию 1000х1000(прописаны в conftest.py)
 
