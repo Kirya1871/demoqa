@@ -16,6 +16,7 @@ class DemoQa(BasePage):
         self.text = WebElements(driver, '#app > footer > span')
 
 
+
     # def exist_icon(self):
     #     try:
     #         self.icon.find_element()
