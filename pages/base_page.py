@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from components.components import WebElements
 import logging
+import requests
 class BasePage:
 
     def __init__(self, driver, base_url):
@@ -37,6 +38,12 @@ class BasePage:
         except Exception as ex:
             logging.log(1, ex)
             return False
+
+    def code_status(self):
+        resp = requests.get(self.base_url)
+        return resp.status_code == 400
+
+
 
 
     #def find_element(self, locator):
